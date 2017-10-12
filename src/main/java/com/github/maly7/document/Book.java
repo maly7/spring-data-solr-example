@@ -5,7 +5,6 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.solr.client.solrj.beans.Field;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.solr.core.mapping.Indexed;
 import org.springframework.data.solr.core.mapping.SolrDocument;
 
 import java.util.Collection;
@@ -14,10 +13,14 @@ import java.util.Collection;
 public class Book {
 
     @Id
+    @Field(value = "ids")
     private String id;
 
-    @Indexed("title_s")
+    @Field(value = "title_s")
     private String title;
+
+    @Field(value = "type_s")
+    private String type = "book";
 
     @Field(child = true)
     private Collection<Author> authors;

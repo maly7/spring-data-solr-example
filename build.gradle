@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        springBootVersion = '1.4.6.RELEASE'
+        springBootVersion = '1.5.7.RELEASE'
     }
 
     repositories {
@@ -29,10 +29,12 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'org.springframework.boot:spring-boot-starter-actuator'
     compile 'org.springframework.boot:spring-boot-starter-data-solr'
-    compile 'org.springframework.data:spring-data-solr:2.1.7.RELEASE'
+    compile 'com.google.guava:guava:19.0'
 
-    compile 'org.apache.solr:solr-core:6.4.1'
-    compile 'org.apache.solr:solr-solrj:6.4.1'
+//    compile 'org.springframework.data:spring-data-solr:2.0.12.RELEASE'
+
+//    compile 'org.apache.solr:solr-core:6.4.1'
+//    compile 'org.apache.solr:solr-solrj:6.4.1'
 }
 
 task solrStart(type: Exec) {

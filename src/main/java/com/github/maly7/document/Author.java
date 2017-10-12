@@ -3,6 +3,7 @@ package com.github.maly7.document;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.solr.client.solrj.beans.Field;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.solr.core.mapping.Indexed;
 import org.springframework.data.solr.core.mapping.SolrDocument;
@@ -11,9 +12,11 @@ import org.springframework.data.solr.core.mapping.SolrDocument;
 public class Author {
 
     @Id
+    @Field(value = "id")
     private String id;
 
     @Indexed("name_s")
+    @Field(value = "name_s")
     private String name;
 
     public String getId() {
