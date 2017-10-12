@@ -44,7 +44,7 @@ task solrStart(type: Exec) {
         commandLine './solr'
     }
 
-    args 'start', '-p', '8984'
+    args 'start', '-p', '8983'
 }
 
 task solrStop(type: Exec) {
@@ -56,5 +56,5 @@ task solrStop(type: Exec) {
         commandLine './solr'
     }
 
-    args 'stop', '-p', '8984'
+    args 'stop', '-p', '8983'
 }
