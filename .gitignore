@@ -105,3 +105,6 @@ src/
 !/.gitignore
 !/src/
 !/gradle/
+!/gradlew.bat
+!/settings.gradle
+!/gradlew
