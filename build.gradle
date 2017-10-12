@@ -33,5 +33,38 @@ dependencies {
 
     compile 'org.apache.solr:solr-core:6.4.1'
     compile 'org.apache.solr:solr-solrj:6.4.1'
-    compile 'org.apache.solr:solr-common:6.4.1'
+    compile 'org.apache.solr:solr-commons:6.4.1'
+}
+
+task solrStart(type: Exec) {
+    workingDir 'solr/bin'
+
+    if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+        commandLine 'cmd', '/c', 'solr.cmd'
+    } else {
+        commandLine './solr'
+    }
+
+    args 'start', '-p', '8984'
+}
+
+task solrStop(type: Exec) {
+    workingDir 'solr/bin'
+
+    if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+        commandLine 'cmd', '/c', 'solr.cmd'
+    } else {
+        commandLine './solr'
+    }
+
+    args 'stop', '-p', '8984'
+}
+
+
+tasks.bootRun.dependsOn 'solrStart'
+
+bootRun {
+    doLast {
+        solrStop
+    }
 }
