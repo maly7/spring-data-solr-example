@@ -1,0 +1,37 @@
+buildscript {
+    ext {
+        springBootVersion = '1.4.6.RELEASE'
+    }
+
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion"
+    }
+}
+
+group 'com.github.maly7'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+
+sourceCompatibility = 1.9
+targetCompatibility = 1.9
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-starter-actuator'
+    compile 'org.springframework.boot:spring-boot-starter-data-solr'
+    compile 'org.springframework.data:spring-data-solr:2.1.7.RELEASE'
+
+    compile 'org.apache.solr:solr-core:6.4.1'
+    compile 'org.apache.solr:solr-solrj:6.4.1'
+    compile 'org.apache.solr:solr-common:6.4.1'
+}
