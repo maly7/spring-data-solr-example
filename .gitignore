@@ -27,9 +27,7 @@ hs_err_pid*
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff:
-.idea/**/workspace.xml
-.idea/**/tasks.xml
-.idea/dictionaries
+.idea/**
 
 # Sensitive or high-churn files:
 .idea/**/dataSources/
@@ -41,9 +39,6 @@ hs_err_pid*
 .idea/**/uiDesigner.xml
 
 # Gradle:
-.idea/**/gradle.xml
-.idea/**/libraries
-
 # CMake
 cmake-build-debug/
 
@@ -85,26 +80,3 @@ gradle-app.setting
 # Cache of project
 .gradletasknamecache
 
-# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
-# gradle/wrapper/gradle-wrapper.properties
-.gitignore
-.gradle/
-.idea/compiler.xml
-.idea/gradle.xml
-.idea/inspectionProfiles/
-.idea/libraries/
-.idea/misc.xml
-.idea/modules.xml
-.idea/modules/
-.idea/workspace.xml
-gradle/
-gradlew
-gradlew.bat
-settings.gradle
-src/
-!/.gitignore
-!/src/
-!/gradle/
-!/gradlew.bat
-!/settings.gradle
-!/gradlew
