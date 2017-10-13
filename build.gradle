@@ -30,11 +30,6 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-actuator'
     compile 'org.springframework.boot:spring-boot-starter-data-solr'
     compile 'com.google.guava:guava:19.0'
-
-//    compile 'org.springframework.data:spring-data-solr:2.0.12.RELEASE'
-
-//    compile 'org.apache.solr:solr-core:6.4.1'
-//    compile 'org.apache.solr:solr-solrj:6.4.1'
 }
 
 task solrStart(type: Exec) {
